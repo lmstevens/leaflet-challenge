@@ -69,7 +69,7 @@ d3.json(url, function (data) {
     var legend = L.control({ position: "bottomright" });
     legend.onAdd = function () {
         var div = L.DomUtil.create("div", "info legend");
-        var limits = [0,1,2,3,4,5];
+        var limits = ["0-1","1-2","2-3","3-4","4-5","5+"];
         var colors = ["purple","blue","green","yellow","orange","red"];
         var labels = [];
 
@@ -77,7 +77,7 @@ d3.json(url, function (data) {
         var legendInfo = "<h1>Magnitudes</h1>" 
             var contents = "<div>"
             for (var i = 0; i < 6; i++) {
-                var item = `<div class="legend-item" style = "background-color: ${colors[i]}">${limits[i]}</div>`
+                var item = `<div class="legend-item" style = "background-color: ${colors[i]}"></div><div>${limits[i]}</div><br></br>`
                 contents += item;
                 
             }
